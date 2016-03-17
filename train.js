@@ -1,16 +1,21 @@
 //Create variable to link to firebase
 
-var trainData = new fireBase ("https://trains.firebaseio.com/");
+var trainData = new Firebase ("https://trains.firebaseio.com/");
 
+
+	var trainName = "";
+	var trainDestination = "";
+	var trainFirst = 0;
+	var trainFrequency = 0;
 
 //add click event on grab info from form
 
 $("#addTrainBtn").on("click", function(){
 
-	var trainName = $("#trainName").val().trim();
-	var trainDestination = $("#destination").val().trim();
-	var trainFirst = moment($("#firstTrain").val().trim(), "HH:mm").subtract(1,"years").format("X");
-	var trainFrequency = $("#frequency").val().trim();
+	 trainName = $("#trainName").val().trim();
+	 trainDestination = $("#destination").val().trim();
+	 trainFirst = moment($("#firstTrain").val().trim(), "HH:mm").subtract(1,"years").format("X");
+	 trainFrequency = $("#frequency").val().trim();
 
 
 	
