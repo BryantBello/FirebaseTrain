@@ -34,6 +34,12 @@ $("#addTrainBtn").on("click", function(){
 	//stop page from reload
 
 	return false;
+// Create Error Handling
+
+	},function(errorObject){
+
+		console.log("Errors handled: " + errorObject.code)
+	})
 
 
 //Event to change the form when firebase data recieved back from firebase
